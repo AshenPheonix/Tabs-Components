@@ -6,19 +6,30 @@
     display: flex;
     justify-content: center;
     padding-top: 60px;
+    
   }
   .tabs-item {
     display: none; 
-
+    transition: opacity .5s;
     width: 75%;
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
       padding-bottom: 10px;
     }
+    &.closing{
+      opacity:0;
+    }
+    .hide{
+      opacity:0;
+    }
   }
   .tabs-item-selected {
     display: block;
+    opacity: 1;
+    &.show{
+      opacity:1;
+    }
   }
 
   .tabs-links {
